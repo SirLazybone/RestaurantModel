@@ -45,6 +45,16 @@ public class DishController {
         return "redirect:/admin/menu";
     }
 
+<<<<<<< HEAD
+=======
+//    //TODO: complete update dish (change id for name, but i suppose that update will be done via form in show)
+//    @PutMapping("/update/{id}")
+//    public ResponseEntity<Dish> updateDishAdmin(@PathVariable UUID id, @RequestBody Dish dish) {
+//        Dish updatedDish = dishService.updateDish(id, dish);
+//        return ResponseEntity.ok(updatedDish);
+//    }
+
+>>>>>>> 055b06ad19b46e17b1b5abbba55291fa3b104d48
     @GetMapping("/admin/menu")
     public String getMenuAdmin(Model model) throws Exception {
         List<Dish> dishes = dishService.getAllDishes();
@@ -55,7 +65,11 @@ public class DishController {
     }
 
     @GetMapping("admin/{id}")
+<<<<<<< HEAD
     public String showAdmin(Model model, @PathVariable UUID id) {
+=======
+    public String showAdmin(Model model, @PathVariable UUID id) { //TODO: change id for name
+>>>>>>> 055b06ad19b46e17b1b5abbba55291fa3b104d48
         Dish dish = dishService.getDishById(id);
         model.addAttribute("dish", dish);
         return "admin/show";
