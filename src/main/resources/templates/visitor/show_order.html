@@ -28,13 +28,8 @@
             </td>
             <td th:if="${order.status == ready}">
                 <form th:method="POST" th:action="@{feedback/{id}/{dish_id}(id=${order.id}, dish_id=${dish.id})}">
-<<<<<<< HEAD
                     <label for="number">estimation</label><input type="number" id="number" name="number" min="1" max="5" required/>
                     <label for="text">text</label><textarea id="text" name="text" required></textarea>
-=======
-                    <label for="number">estimation</label><input type="number" id="number" name="number" min="1" max="5"/>
-                    <label for="text">text</label><textarea id="text" name="text"></textarea>
->>>>>>> 055b06ad19b46e17b1b5abbba55291fa3b104d48
                     <input type="submit" value="leave a review">
                 </form>
             </td>

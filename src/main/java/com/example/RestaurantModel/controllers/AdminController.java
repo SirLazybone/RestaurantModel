@@ -26,10 +26,6 @@ public class AdminController {
         return "admin";
     }
 
-<<<<<<< HEAD
-=======
-    // TODO: change for delete mapping and delete by id
->>>>>>> 055b06ad19b46e17b1b5abbba55291fa3b104d48
     @PostMapping("/admin")
     public String  deleteUser(@RequestParam(required = true, defaultValue = "" ) UUID userId,
                               @RequestParam(required = true, defaultValue = "" ) String action,

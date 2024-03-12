@@ -46,7 +46,6 @@ public class OrderService {
         order.setDishes(dishes);
         order.setStatus(Status.ACCEPTED);
         order.setTime(LocalDateTime.now());
-        order.setTime(LocalDateTime.now()); //TODO: решить со временем, либо ready_time, либо time now + maxCoolingTiem (наверное 2)
         orderRepository.save(order);
         cookOrderAsync(order);
         return true;
